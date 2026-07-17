@@ -121,7 +121,8 @@ EquipmentRepository
 데이터베이스 변경 시 영향 최소화
 테스트 용이성 증가
 유지보수성 향상
-4. 설비 상태 Health Score 알고리즘
+
+## 4. 설비 상태 Health Score 알고리즘
 
 설비 상태 분석을 위해 센서 데이터를 기반으로 Health Score를 계산하는 알고리즘을 구현하였다.
 
@@ -177,7 +178,8 @@ Risk Score 증가
 ↓
 
 Maintenance Priority 상승
-5. Risk Score 위험도 분석
+
+## 5. Risk Score 위험도 분석
 
 설비 위험도를 수치화하기 위해 Risk Score 계산 로직을 구현하였다.
 
