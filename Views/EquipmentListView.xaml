@@ -1,0 +1,51 @@
+<UserControl x:Class="FactoryGuardian.Views.EquipmentListView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+	<Grid>
+
+
+		<DataGrid
+            ItemsSource="{Binding Equipments}"
+            AutoGenerateColumns="False">
+
+
+			<DataGrid.Columns>
+
+
+				<DataGridTextColumn
+                    Header="설비명"
+                    Binding="{Binding Name}"/>
+
+
+				<DataGridTextColumn
+                    Header="온도"
+                    Binding="{Binding Temperature}"/>
+
+
+				<DataGridTextColumn
+                    Header="진동"
+                    Binding="{Binding Vibration}"/>
+
+
+				<DataGridTextColumn
+                    Header="Health"
+                    Binding="{Binding Health}"/>
+
+
+				<DataGridTextColumn
+                    Header="Risk"
+                    Binding="{Binding Risk}"/>
+
+
+			</DataGrid.Columns>
+
+
+		</DataGrid>
+
+
+	</Grid>
+
+
+</UserControl>

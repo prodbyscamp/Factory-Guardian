@@ -1,0 +1,29 @@
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\Resources\Button.baml
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\Resources\Color.baml
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\Resources\DataGridStyle.baml
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\Views\EquipmentListView.baml
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\Views\EquipmentListView.g.cs
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\FactoryGuardian_MarkupCompile.cache
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\FactoryGuardian.g.resources
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\FactoryGuardian.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\FactoryGuardian.AssemblyInfoInputs.cache
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\FactoryGuardian.AssemblyInfo.cs
+C:\Users\태현\source\repos\FactoryGuardian\obj\Debug\net8.0-windows\FactoryGuardian.csproj.CoreCompileInputs.cache
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\Resources\Button.baml
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\Resources\Color.baml
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\Resources\DataGridStyle.baml
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\Views\EquipmentListView.baml
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\Views\EquipmentListView.g.cs
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\FactoryGuardian_MarkupCompile.cache
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\FactoryGuardian.g.resources
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\FactoryGuardian.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\FactoryGuardian.AssemblyInfoInputs.cache
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\FactoryGuardian.AssemblyInfo.cs
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\FactoryGuardian.csproj.CoreCompileInputs.cache
+C:\Users\prodb\Downloads\Factory Guardian\obj\Debug\net8.0-windows\FactoryGuardian.csproj.AssemblyReference.cache

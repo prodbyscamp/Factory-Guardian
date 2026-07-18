@@ -1,0 +1,136 @@
+﻿<Window x:Class="FactoryGuardian.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Factory Guardian"
+        Height="800"
+        Width="1400"
+        WindowStartupLocation="CenterScreen">
+
+
+    <Grid>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+
+
+        <Border
+            Grid.Column="0"
+            Background="#1E1E1E">
+
+
+            <StackPanel>
+
+
+                <TextBlock
+                    Text="Factory Guardian"
+                    Foreground="White"
+                    FontSize="24"
+                    FontWeight="Bold"
+                    Margin="20,30,20,40"/>
+
+
+
+
+
+                <Button
+                    Content="📊 Dashboard"
+                    Height="45"
+                    Margin="15,5"
+                    FontSize="16"/>
+
+
+
+                <Button
+                    Content="⚙ Equipment"
+                    Height="45"
+                    Margin="15,5"
+                    FontSize="16"/>
+
+
+
+                <Button
+                    Content="🔧 Maintenance"
+                    Height="45"
+                    Margin="15,5"
+                    FontSize="16"/>
+
+
+
+                <Button
+                    Content="🚨 Alarm"
+                    Height="45"
+                    Margin="15,5"
+                    FontSize="16"/>
+
+
+
+                <Button
+                    Content="⚙ Settings"
+                    Height="45"
+                    Margin="15,5"
+                    FontSize="16"/>
+
+
+            </StackPanel>
+
+
+        </Border>
+
+
+
+
+
+        <Grid
+            Grid.Column="1"
+            Background="#F5F5F5">
+
+
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="70"/>
+
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+
+
+
+            <Border
+                Background="White"
+                Grid.Row="0">
+
+
+                <TextBlock
+                    Text="Equipment Monitoring System"
+                    FontSize="22"
+                    VerticalAlignment="Center"
+                    Margin="25,0"/>
+
+
+            </Border>
+
+
+
+
+
+            <ContentControl
+                Grid.Row="1"
+                x:Name="MainContent"/>
+
+
+
+        </Grid>
+
+
+
+    </Grid>
+
+
+</Window>
