@@ -1,12 +1,92 @@
 <Application x:Class="FactoryGuardian.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FactoryGuardian"
+             xmlns:viewmodels="clr-namespace:FactoryGuardian.ViewModels"
+             xmlns:views="clr-namespace:FactoryGuardian.Views"
              StartupUri="MainWindow.xaml">
-
-
     <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/DarkTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        <DataTemplate DataType="{x:Type viewmodels:DashboardViewModel}">
+            <views:DashboardView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:MachinesViewModel}">
+            <views:MachinesView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:AlertsViewModel}">
+            <views:AlertsView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:RobotMonitorViewModel}">
+            <views:RobotMonitorView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:EquipmentViewModel}">
+            <views:EquipmentView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:MaintenanceViewModel}">
+            <views:MaintenanceView />
+        </DataTemplate>
+        <Style x:Key="NavButtonStyle" TargetType="RadioButton">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextSecondaryBrush}"/>
+            <Setter Property="Margin" Value="0 0 0 5"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="3 0 0 0" BorderBrush="Transparent" CornerRadius="8" Margin="10,0">
+                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+                                <Setter TargetName="border" Property="Background" Value="{DynamicResource CardBackgroundHoverBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+                                <Setter TargetName="border" Property="Background" Value="{DynamicResource CardBackgroundSelectedBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
+        <Style x:Key="menuButtonText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type RadioButton}}}" />
+        </Style>
+
+        <Style x:Key="topMenuButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextSecondaryBrush}"/>
+            <Setter Property="Margin" Value="5 0 0 0"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="15">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource DangerBrush}" />
+                    <Setter Property="Foreground" Value="#ffffff" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        </ResourceDictionary>
     </Application.Resources>
-
-
 </Application>
