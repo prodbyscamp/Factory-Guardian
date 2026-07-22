@@ -55,7 +55,6 @@
                     <TextBlock Text="{Binding CurrentDateKr}" FontSize="14" Foreground="{DynamicResource TextSecondaryBrush}" FontWeight="SemiBold"/>
                 </StackPanel>
             </StackPanel>
-        </Grid>
 
         <!--얘도 -->
         <Grid Grid.Row="1" Margin="50 10 15 30">
