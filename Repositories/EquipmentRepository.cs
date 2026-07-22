@@ -11,6 +11,51 @@ namespace FactoryGuardian.Repositories
         public EquipmentRepository(string connectionString)
         {
             _connectionString = connectionString;
+            InitializeDatabase();
+        }
+
+        private void InitializeDatabase()
+        {
+            using var connection = new SqliteConnection(_connectionString);
+            connection.Open();
+
+            var command = connection.CreateCommand();
+            command.CommandText = """
+                CREATE TABLE IF NOT EXISTS Equipment (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Name TEXT NOT NULL,
+                    ModelName TEXT,
+                    Manufacturer TEXT,
+                    Location TEXT,
+                    Temperature REAL DEFAULT 0,
+                    Vibration REAL DEFAULT 0,
+                    Power REAL DEFAULT 0,
+                    RunningHours REAL DEFAULT 0,
+                    HealthScore REAL DEFAULT 100,
+                    RiskScore REAL DEFAULT 0,
+                    RiskLevel TEXT DEFAULT 'Low',
+                    PriorityScore REAL DEFAULT 0,
+                    Status TEXT DEFAULT '정상',
+                    LastInspectionDate TEXT,
+                    NextInspectionDate TEXT,
+                    UpdatedAt TEXT
+                );
+                """;
+                    command.ExecuteNonQuery();
+            
+            // 더미데이터
+            command.CommandText = "SELECT COUNT(*) FROM Equipment";
+            long count = (long)command.ExecuteScalar();
+            if (count == 0)
+            {
+                command.CommandText = """
+                    INSERT INTO Equipment (Name, ModelName, Manufacturer, Location, Temperature, Vibration, Power, RunningHours, HealthScore, RiskScore, RiskLevel, PriorityScore, Status)
+                    VALUES 
+                    ('로봇 암 1호기', 'RA-1000', 'TechCorp', 'Line A', 45.5, 0.2, 500.0, 1200.5, 95.0, 10.0, 'Low', 5.0, '정상'),
+                    ('컨베이어 벨트', 'CB-200', 'LogiSys', 'Line A', 35.0, 0.1, 200.0, 8000.0, 80.0, 40.0, 'Mid', 45.0, '점검 필요');
+                """;
+                command.ExecuteNonQuery();
+            }
         }
 
 
