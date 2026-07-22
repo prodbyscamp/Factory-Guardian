@@ -1,5 +1,5 @@
 using System.Windows.Controls;
-using Factory Guardian.ViewModels;
+using FactoryGuardian.ViewModels;
 
 
 namespace FactoryGuardian.Views
