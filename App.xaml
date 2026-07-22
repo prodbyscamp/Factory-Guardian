@@ -13,9 +13,7 @@
         <DataTemplate DataType="{x:Type viewmodels:DashboardViewModel}">
             <views:DashboardView />
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodels:MachinesViewModel}">
-            <views:MachinesView />
-        </DataTemplate>
+
         <DataTemplate DataType="{x:Type viewmodels:AlertsViewModel}">
             <views:AlertsView />
         </DataTemplate>

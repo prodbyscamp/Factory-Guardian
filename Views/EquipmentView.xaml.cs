@@ -1,6 +1,4 @@
 using System.Windows.Controls;
-using FactoryGuardian.ViewModels;
-
 
 namespace FactoryGuardian.Views
 {

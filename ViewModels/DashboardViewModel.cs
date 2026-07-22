@@ -42,7 +42,7 @@ namespace FactoryGuardian.ViewModels
         private void Load()
         {
             Status =
-                _service.GetStatistics();
+                _service.GetStatus();
         }
 
     }

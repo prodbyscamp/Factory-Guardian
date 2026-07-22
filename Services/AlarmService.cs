@@ -6,7 +6,7 @@ namespace FactoryGuardian.Services
 {
     public class AlarmService
     {
-        public AlarmService CreateAlarm(Equipment equipment)
+        public Alarm CreateAlarm(Equipment equipment)
         {
 
             var alarm = new Alarm();
@@ -19,21 +19,21 @@ namespace FactoryGuardian.Services
 
             if (equipment.RiskScore >= 80)
             {
-                alarm.AlarmLevel = "Critical";
+                alarm.Level = "Critical";
                 alarm.Message =
                     $"{equipment.Name} 위험 상태";
             }
 
             else if (equipment.RiskScore >= 50)
             {
-                alarm.AlarmLevel = "Warning";
+                alarm.Level = "Warning";
                 alarm.Message =
                     $"{equipment.Name} 점검 필요";
             }
 
             else
             {
-                alarm.AlarmLevel = "Info";
+                alarm.Level = "Info";
                 alarm.Message =
                     $"{equipment.Name} 정상";
             }

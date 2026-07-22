@@ -1,7 +1,8 @@
 using FactoryGuardian.Repositories;
+using FactoryGuardian.ViewModels;
 using System.Windows.Controls;
 
-namespace FactoryGuardian.views;
+namespace FactoryGuardian.Views;
 
 public partial class EquipmentListView : UserControl
 {

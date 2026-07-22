@@ -5,5 +5,5 @@ namespace FactoryGuardian.ViewModels
         public AlertsViewModel()
         {
         }
-  }
+    }
 }

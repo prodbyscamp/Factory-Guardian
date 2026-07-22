@@ -5,7 +5,7 @@ namespace FactoryGuardian.Services
 {
     public class MaintenanceService
     {
-        private readonly MaintenanceService _repository;
+        private readonly MaintenanceRepository _repository;
 
 
         public MaintenanceService()

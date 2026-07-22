@@ -29,7 +29,7 @@ namespace FactoryGuardian.Algorithms
 
                 if (tempRatio > 100)
                     tempRatio = 100;
-            
+            } // close if (criticalTemp > 0)
 
             // 최근 고장 이력 횟수에 따라 위험도를 증가시킴.
             double failureScore =
@@ -40,7 +40,6 @@ namespace FactoryGuardian.Algorithms
 
             if (failureScore < 0)
                 failureScore = 0;
-        }
 
 
         double riskScore = (healthRisk * HealthWeight) + (tempRatio * TempWeight) + (failureScore * FailureWeight);

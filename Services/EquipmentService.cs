@@ -7,14 +7,14 @@ namespace FactoryGuardian.Services
     public class EquipmentService
     {
         private readonly Riskcalculator _riskCalculator;
-        private readonly MaintenanceTask _task;
+        private readonly MaintenanceScoreCalculator _priorityCalculator;
         private readonly EquipmentLifeCalculator _healthCalculator;
 
         public EquipmentService()
         {
             _healthCalculator = new EquipmentLifeCalculator();
             _riskCalculator = new Riskcalculator();
-            _task = new MaintenanceTask();
+            _priorityCalculator = new MaintenanceScoreCalculator();
         }
 
 
@@ -51,7 +51,7 @@ namespace FactoryGuardian.Services
             // 우선순위 값
 
             equipment.PriorityScore =
-                _task.CalculatePriorityScore(
+                _priorityCalculator.Calculate(
                     equipment.RunHours,
                     1000,
                     equipment.RiskScore,

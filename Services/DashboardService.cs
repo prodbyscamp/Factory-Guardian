@@ -13,7 +13,7 @@ namespace FactoryGuardian.Services
         public DashboardService()
         {
             _repository =
-                new EquipmentRepository();
+                new EquipmentRepository("Data Source=factory.db");
         }
 
 

@@ -10,6 +10,7 @@ namespace FactoryGuardian.ViewModels
     {
 
         private readonly EquipmentService _service;
+        private readonly FactoryGuardian.Repositories.EquipmentRepository _repository;
 
 
 
@@ -23,7 +24,7 @@ namespace FactoryGuardian.ViewModels
 
         public EquipmentViewModel()
         {
-
+            _repository = new FactoryGuardian.Repositories.EquipmentRepository("Data Source=factory.db");
             _service =
                 new EquipmentService();
 
@@ -44,7 +45,7 @@ namespace FactoryGuardian.ViewModels
             // 나중에 Repository 연결
                 
             var list =
-                service.GetAll();
+                _repository.GetAll();
 
 
             foreach (var item in list)

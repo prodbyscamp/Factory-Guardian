@@ -41,9 +41,9 @@ namespace FactoryGuardian.Repositories
                     UpdatedAt TEXT
                 );
                 """;
-                    command.ExecuteNonQuery();
+            command.ExecuteNonQuery();
             
-            // 더미데이터
+            // Insert dummy data if table is empty
             command.CommandText = "SELECT COUNT(*) FROM Equipment";
             long count = (long)command.ExecuteScalar();
             if (count == 0)
